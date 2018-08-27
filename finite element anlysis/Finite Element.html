@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<title>Max McGinty</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+    body, html {
+        height: 100%;
+        color: #777;
+        line-height: 1.8;
+    }
+
+    /* Create a Parallax Effect */
+    .bgimg-1{
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+        background-image: url('stress.PNG');
+        min-height: 100%;
+    }
+       .w3-wide {letter-spacing: 10px;}
+    .w3-hover-opacity {cursor: pointer;}
+
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1024px) {
+        .bgimg-1{
+            background-attachment: scroll;
+        }
+    }
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a href="../index.html" class="w3-bar-item w3-button">HOME</a>
+        <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+        <a href="#image" class="w3-bar-item w3-button">IMAGES</a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+        <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
+    </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Finite Element Analysis</span>
+    </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+    <h3 class="w3-center">Finite Element Analysis</h3>
+    <p>I have had some experince with finite element analysis in other projects. In all of the FIRST robots and in the heavy lift drone I have used Autodesk Inventor's stress anlysis tool
+    to confirm design choices and material selection. I have also began learning how to do computational flow design and heat transfer in Autodesk CFD. Through that I began to lean about the mechanics
+    of CFD however I still have a surface level understanding.</p>
+</div>
+
+<!-- Container (Project section) -->
+<div class="w3-container w3-padding-64" id="image">
+    <div class="w3-row">
+        <div class="w3-half w3-padding-16 w3-image"><img src="Capture.PNG" style="width:75%"></div>
+        <div class="w3-half w3-padding-16"><p> This picture is showing expected stress on the frame of my Heavy lift Drone due to torque and shows how the frame may deform
+        due to other forces. This shows how I can improve my design by looking at stress points in my frame.</p></div>
+    </div>
+    <div class="w3-row">
+        <div class="w3-half w3-padding-16 w3-image"><img src="stress.PNG" style="width:75%"></div>
+        <div class="w3-half w3-padding-16"><p>Here I attempt to validate the mounting for my drone's motors. by using a expected forces from thrust data from the manufacture I can
+        see if my mounting solution will fail or deform to an extent that would effect performance</p></div>
+    </div>
+
+</div>
+<!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <div class="w3-xlarge w3-section">
+            <!--<i class="fa fa-instagram w3-hover-opacity"></i>-->
+            <!--<i class="fa fa-snapchat w3-hover-opacity"></i>-->
+            <!--<i class="fa fa-twitter w3-hover-opacity"></i>-->
+        </div>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+</body>
+</html>
